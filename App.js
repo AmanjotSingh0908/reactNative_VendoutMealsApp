@@ -10,13 +10,33 @@ const Stack = createNativeStackNavigator(); //obj with two properties
 export default function App() {
   return (
     <>
-      <StatusBar style='dark' />
+      <StatusBar style="light" />
       <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="MealsCategories" component={CategoriesScreen} />
-        <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
-      </Stack.Navigator>
-
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#351401" },
+            headerTintColor: "white",
+            contentStyle: { backgroundColor: "#3f2f25" },
+          }}
+        >
+          <Stack.Screen
+            name="MealsCategories"
+            options={{
+              title: "All Categories",
+            }}
+            component={CategoriesScreen}
+          />
+          <Stack.Screen
+            name="MealsOverview"
+            component={MealsOverviewScreen}
+            // options={({ route, navigation }) => {
+            //   const catId = route.params.categoryId
+            //   return {
+            //     title: catId,
+            //   };
+            // }}   Alternative is to set options from inside the component
+          />
+        </Stack.Navigator>
       </NavigationContainer>
     </>
   );
