@@ -4,8 +4,8 @@ import { View, Pressable, Text, Image, StyleSheet, Platform } from "react-native
 
 function MealItem({id, title, imageUrl, duration, complexity, affordability }) {
 
-  
   const navigation = useNavigation();
+  
   function selectMealItemHandler() {
     navigation.navigate('MealDetail', {
       mealId : id
