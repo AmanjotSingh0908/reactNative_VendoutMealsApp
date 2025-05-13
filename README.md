@@ -42,10 +42,15 @@ Expo CLI (npm install -g expo-cli) – optional but useful
 Expo Go app installed on your mobile device
 
 🗂️ Project Structure (Basic)
+
 reactNative_VendoutMealsApp/
+
 ├── App.js
+
 ├── components
+
 ├── screens
+
 ├── ....
 🤝 Contributing
 Feel free to fork the repository. Issues and feedback are welcome.
