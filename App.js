@@ -1,11 +1,10 @@
-import { StyleSheet } from "react-native";
+import { Button, StyleSheet } from "react-native";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
 import MealDetailScreen from "./screens/MealDetailScreen";
-
 
 const Stack = createNativeStackNavigator(); //obj with two properties
 
@@ -17,7 +16,7 @@ export default function App() {
         <Stack.Navigator
           screenOptions={{
             headerStyle: { backgroundColor: "#351401" },
-            headerTintColor: "white",
+            headerTintColor: "white",   //Text color of the header
             contentStyle: { backgroundColor: "#3f2f25" },
           }}
         >
@@ -38,7 +37,24 @@ export default function App() {
             //   };
             // }}   Alternative is to set options from inside the component
           />
-          <Stack.Screen name="MealDetail" component={MealDetailScreen} />
+          <Stack.Screen
+            name="MealDetail"
+            component={MealDetailScreen}
+            // options={{
+            //   headerRight: () => {
+            //     // This is a function that returns a component and is good if there is no direct interaction with the component
+            //     return (
+            //       <Button
+            //         title="Tap me!"
+            //         onPress={() => {
+            //           console.log("Pressed!");
+            //         }}
+            //       />
+            //     );
+            //     return <Button title="Tap me!" />;
+            //   },
+            // }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
