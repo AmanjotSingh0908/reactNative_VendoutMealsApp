@@ -28,7 +28,7 @@ The app will load on your phone.
 📱 Tech Stack
 React Native
 Expo
-React Navigation (@react-navigation/native, @react-navigation/native-stack)
+React Navigation (@react-navigation/native, @react-navigation/native-stack, @react-navigation/drawer)
 
 react-native-screens
 
